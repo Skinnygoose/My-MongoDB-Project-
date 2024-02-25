@@ -1,0 +1,23 @@
+<div class="author">
+    <h1 class="author__heading">Hi i am yousuf</h1>
+    <p class="author__body">This is my blog website about my favourite game Cyberpunk2077</p>
+</div>
+<img src="/img/cyberpunk.webp" alt="hero-image" class="hero-iamge" width="600" height="600">
+
+<section class="articles">
+    <h2 class="articles__heading">Latest Posts</h2>
+    
+    <ul class="article-ul">
+        <% data.forEach(post => { %>
+          <li>
+            <a href="/post/<%= post._id %>">
+              <span><%= post.title %></span>
+              <span class="article-list__date"><%= post.createdAt.toDateString() %></span>
+            </a>
+          </li>
+        <% }) %>
+      </ul>
+
+<a href="#" class="pagination">&lt; View older Posts</a>
+    
+</section>

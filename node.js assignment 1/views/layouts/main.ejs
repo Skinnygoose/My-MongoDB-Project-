@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= locals.title %></title> <% // here we have added our local object from main.ejs and used title from that object %>
+    <meta name = 'description' content="<%= locals.description %>"></meta>
+    <link rel="stylesheet" href="/css/style.css">
+    <script defer src="/js/script.js"></script>
+</head>
+<body>
+    <%- include('../partials/search.ejs') %> 
+    <div class="container">
+        <%- include('../partials/header.ejs') %>  <% //Here we are adding header from a separate file from partials folder %>
+        <main class="main">
+            <%- body %>
+
+        </main>
+        <%- include('../partials/footer.ejs') %>  <% //Here we are adding header from a separate file from partials folder %>
+    </div>
+</body>
+</html>
